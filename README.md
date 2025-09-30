@@ -1,59 +1,49 @@
-# PostsApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
+# Prueba Tecnica Angular - Posts
 
-## Development server
+Este proyecto es una aplicación Angular que permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre posts. Utiliza la API de [JSONPlaceholder](https://jsonplaceholder.typicode.com/) para obtener datos de ejemplo y maneja posts creados localmente en memoria.
 
-To start a local development server, run:
+## Funcionalidades
 
-```bash
-ng serve
-```
+- Listar los 10 primeros posts.
+- Crear un nuevo post con ID único en memoria.
+- Ver detalles de un post.
+- Editar un post existente.
+- Eliminar un post.
+- Validación de formularios para título, cuerpo y usuario.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tecnologías
 
-## Code scaffolding
+- Angular (standalone components)
+- TypeScript
+- HTML / CSS
+- JSONPlaceholder API
+- RxJS
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Cómo ejecutar
 
-```bash
-ng generate component component-name
-```
+1. Clonar el repositorio:
+   git clone https://github.com/usuario/nombre-repo.git
+   cd nombre-repo
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. Instalar dependencias:
+    npm install
 
-```bash
-ng generate --help
-```
+3. Ejecutar la app:
+    ng serve
 
-## Building
+4. Abrir en el navegador: http://localhost:4200/
 
-To build the project run:
+Estructura principal
+app.component.* → Contenedor principal y navegación.
 
-```bash
-ng build
-```
+list.component.* → Lista de posts con opciones Ver, Editar y Eliminar.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+form.component.* → Formulario para crear o editar posts.
 
-## Running unit tests
+posts.service.ts → Servicio para manejar posts locales y de la API.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+👨‍💻 Desarrollado por
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+William Barrios Rivera
+Estudiante de Ingeniería de Sistemas
