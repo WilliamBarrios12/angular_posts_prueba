@@ -1,0 +1,16 @@
+<div *ngIf="loading">Cargando publicaciones...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<table *ngIf="!loading && posts.length">
+  <tr *ngFor="let post of posts">
+    <td>{{ post.id }}</td>
+    <td>{{ post.title }}</td>
+    <td>
+      <button (click)="view(post.id)">Ver</button>
+      <button (click)="edit(post.id)">Editar</button>
+      <button (click)="confirmDelete(post.id)">Eliminar</button>
+    </td>
+  </tr>
+</table>
+
+<div *ngIf="!loading && !posts.length">No hay publicaciones.</div>

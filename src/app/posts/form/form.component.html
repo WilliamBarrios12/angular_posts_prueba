@@ -1,0 +1,26 @@
+<form [formGroup]="postForm" (ngSubmit)="submit()">
+  <div>
+    <label>User ID</label>
+    <input formControlName="userId" type="number" />
+    <small *ngIf="postForm.get('userId')?.touched && postForm.get('userId')?.errors?.['required']">Requerido</small>
+    <small *ngIf="postForm.get('userId')?.errors?.['min']">Debe ser ≥1</small>
+  </div>
+
+  <div>
+    <label>Título</label>
+    <input formControlName="title" />
+    <small *ngIf="postForm.get('title')?.touched && postForm.get('title')?.errors?.['required']">Requerido</small>
+    <small *ngIf="postForm.get('title')?.errors?.['minlength']">Mínimo 5 caracteres</small>
+  </div>
+
+  <div>
+    <label>Cuerpo</label>
+    <textarea formControlName="body"></textarea>
+    <small *ngIf="postForm.get('body')?.touched && postForm.get('body')?.errors?.['required']">Requerido</small>
+    <small *ngIf="postForm.get('body')?.errors?.['minlength']">Mínimo 5 caracteres</small>
+  </div>
+
+  <button type="submit">{{ isEdit ? 'Actualizar' : 'Crear' }}</button>
+  <button type="button" (click)="cancel()">Cancelar</button>
+
+</form>

@@ -1,0 +1,12 @@
+<div *ngIf="loading">Cargando...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<div *ngIf="post">
+  <h2>{{ post.title }}</h2>
+  <p><strong>Usuario:</strong> {{ post.userId }}</p>
+  <p>{{ post.body }}</p>
+  <button (click)="editPost()">Editar</button>
+  <button (click)="back()">Volver</button>
+</div>
+
+
